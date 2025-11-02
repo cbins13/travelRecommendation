@@ -66,9 +66,6 @@ a.active {
   background: url(./assets/background.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Roboto", Arial, sans-serif; /* Modern font */
   color: white; /* Default text color */
 }
@@ -84,9 +81,42 @@ a.active {
   z-index: 1; /* Ensure the overlay is above the background */
 }
 
-.content-container > * {
-  position: relative; /* Ensure child elements are above the overlay */
+.content-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 2;
+}
+
+
+#home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  ); /* Gradient overlay for a dynamic effect */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 60%,
+    0 100%
+  ); /* Reduce the area on the right */
+  z-index: 2; /* Ensure this overlay is above the first overlay */
+}
+
+#home > *, #about-us > *, #contact-us > * {
+  position: relative; /* Ensure child elements are above the overlays */
+  z-index: 3;
   color: inherit; /* Inherit white text color */
 }
 
@@ -132,4 +162,64 @@ a.active {
 
 .search button:active {
   transform: scale(0.95); /* Slightly shrink button on click */
+}
+
+#home-caption {
+  position: relative; /* Use relative positioning */
+  padding-top: 10%; /* Adjust vertical spacing */
+  padding-left: 5%; /* Adjust horizontal spacing */
+  display: flex;
+  flex-direction: column; /* Arrange spans in a column (one per row) */
+  align-items: flex-start; /* Align text to the left */
+}
+
+#home-caption span {
+  font-size: 100px; /* Set font size */
+  font-weight: 900; /* Increase font weight for better readability */
+  color: white; /* Ensure the text is visible on the background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+  line-height: 1.2; /* Adjust spacing between rows */
+}
+
+#home-description {
+  position: relative; /* Use relative positioning */
+  padding-top: 2rem; /* Add spacing below the caption */
+  padding-left: 5%; /* Align with the caption */
+  max-width: 600px; /* Limit the width for better readability */
+  font-size: 1.2rem; /* Slightly larger font size for the description */
+  line-height: 1.6; /* Add spacing between lines */
+  font-weight: 700; /* Increase font weight for better readability */
+  color: white; /* Ensure the text is visible on the background */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+}
+
+#social-media {
+  position: absolute; /* Position the social media icons absolutely */
+  bottom: 1rem; /* Place them near the bottom of the page */
+  left: 1rem; /* Place them near the left side of the page */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange icons in a column (one per row) */
+  gap: 0.5rem; /* Add spacing between icons */
+  padding: 1rem; /* Add some padding around the div */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: flex-start; /* Align items to the left */
+  z-index: 3; /* Ensure the icons are above the gradient background */
+}
+
+#social-media a img {
+  width: 25px; /* Set the width of each icon */
+  height: 25px; /* Set the height of each icon */
+  filter: invert(100%) brightness(100%); /* Make the icons white */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Add hover effect for interactivity */
+}
+
+#social-media a img:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  filter: invert(70%) brightness(150%); /* Slightly dim the white color on hover */
+}
+
+#about-us-title{
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
