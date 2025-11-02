@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif; /* Modern font for the entire page */
+  color: white; /* Default text color for the entire page */
+  background-color: #121212; /* Dark background for fallback */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; /* Bold headings */
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and text-decoration */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: lightblue;
+}
+
+/* Active state for the current page link */
+a.active {
+  color: lightblue; /* Highlight the active link */
+  text-decoration: underline; /* Add underline to indicate the active page */
+  font-weight: bolder; /* Make it stand out more */
+}
+
+.trademark {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content-container {
+  position: relative; /* Ensure the container is positioned for overlay */
+  background: url(./assets/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", Arial, sans-serif; /* Modern font */
+  color: white; /* Default text color */
+}
+
+.content-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+  z-index: 1; /* Ensure the overlay is above the background */
+}
+
+.content-container > * {
+  position: relative; /* Ensure child elements are above the overlay */
+  z-index: 2;
+  color: inherit; /* Inherit white text color */
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between input and buttons */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 0.5rem 1rem; /* Add padding for spacing */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for distinction */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+.search input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search input[type="text"]:focus {
+  border-color: lightblue; /* Highlight border on focus */
+}
+
+.search button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search button:hover {
+  background-color: lightblue; /* Change background on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.search button:active {
+  transform: scale(0.95); /* Slightly shrink button on click */
+}
