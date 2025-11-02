@@ -173,7 +173,7 @@ a.active {
   align-items: flex-start; /* Align text to the left */
 }
 
-#home-caption span {
+#home-caption span, #about-us-title span, #contact-us-title span {
   font-size: 100px; /* Set font size */
   font-weight: 900; /* Increase font weight for better readability */
   color: white; /* Ensure the text is visible on the background */
@@ -216,10 +216,4 @@ a.active {
 #social-media a img:hover {
   transform: scale(1.1); /* Slightly enlarge the icon on hover */
   filter: invert(70%) brightness(150%); /* Slightly dim the white color on hover */
-}
-
-#about-us-title{
-    font-size: 3rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
