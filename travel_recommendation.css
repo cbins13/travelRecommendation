@@ -173,7 +173,16 @@ a.active {
   align-items: flex-start; /* Align text to the left */
 }
 
-#home-caption span, #about-us-title span, #contact-us-title span {
+#about-us-title{
+  position: relative;
+  padding-top: 6%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#home-caption span, #about-us-title span, #contact-us-title span, #our-team-title {
   font-size: 100px; /* Set font size */
   font-weight: 900; /* Increase font weight for better readability */
   color: white; /* Ensure the text is visible on the background */
@@ -191,6 +200,17 @@ a.active {
   font-weight: 700; /* Increase font weight for better readability */
   color: white; /* Ensure the text is visible on the background */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+}
+
+#about-us-description{
+  position: relative;
+  padding-top: 2rem;
+  padding-left: 5%;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 #social-media {
@@ -216,4 +236,54 @@ a.active {
 #social-media a img:hover {
   transform: scale(1.1); /* Slightly enlarge the icon on hover */
   filter: invert(70%) brightness(150%); /* Slightly dim the white color on hover */
+}
+
+
+#our-team{
+  display: flex;
+  padding-left: 5%;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 5rem;
+}
+
+#our-team-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-members-container{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.team-member{
+  padding-inline: 3rem;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.team-member-name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
