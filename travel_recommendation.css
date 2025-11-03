@@ -22,7 +22,7 @@ p {
 }
 
 header {
-  padding: 1rem;
+  padding: 1rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -238,7 +238,6 @@ a.active {
   filter: invert(70%) brightness(150%); /* Slightly dim the white color on hover */
 }
 
-
 #our-team{
   display: flex;
   padding-left: 5%;
@@ -265,7 +264,7 @@ a.active {
 
 .team-member{
   padding-inline: 3rem;
-  padding-block: 1rem;
+  padding-block: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -286,4 +285,111 @@ a.active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#contact-us{
+  display: flex;
+  flex-direction: row;
+  padding-top: 2%;
+}
+
+#contact-us div{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+#contact-us-title, #contact-us-form{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding-inline: 2rem;
+  width: 100%;
+}
+
+#contact-us-title p{
+  font-size: 1.2rem;
+}
+
+#contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Add spacing between form elements */
+  width: 100%;
+  max-width: 600px; /* Limit the form width for better readability */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 2rem; /* Add padding inside the form */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+#contact-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white; /* Ensure the label text is visible */
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"] {
+  padding: 0.75rem 1rem; /* Add padding for better usability */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: white; /* White text for readability */
+  font-size: 1rem;
+  outline: none; /* Remove default focus outline */
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth focus effect */
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus {
+  border-color: lightblue; /* Highlight border on focus */
+  background: rgba(255, 255, 255, 0.3); /* Slightly brighter background on focus */
+}
+
+#contact-form button {
+  padding: 0.75rem 1.5rem; /* Add padding for a larger clickable area */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: lightblue; /* Modern button color */
+  color: #333; /* Dark text for contrast */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+#contact-form button:hover {
+  background-color: #1e90ff; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#contact-form button:active {
+  transform: scale(0.95); /* Slightly shrink the button on click */
+}
+
+#contact-form textarea {
+  padding: 0.75rem 1rem; /* Add padding for better usability */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: white; /* White text for readability */
+  font-size: 1rem; /* Modern font size */
+  outline: none; /* Remove default focus outline */
+  resize: vertical; /* Allow vertical resizing only */
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth focus effect */
+}
+
+#contact-form textarea:focus {
+  border-color: lightblue; /* Highlight border on focus */
+  background: rgba(255, 255, 255, 0.3); /* Slightly brighter background on focus */
 }

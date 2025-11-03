@@ -25,14 +25,25 @@
         <a href="travel_recommendation.html">Home</a>
         <a href="about_us.html">About Us</a>
         <a href="contact_us.html">Contact Us</a>
-        <div class="search">
-          <input type="text" placeholder="Search..." />
-          <button type="submit">Search</button>
-          <button>Clear</button>
-        </div>
       </nav>
     </header>
-    <section id="contact-us"class="content-container"></section>
+    <section id="contact-us" class="content-container">
+      <div id="contact-us-title">
+        <span>CONTACT US</span>
+        <p>Get in touch with us.</p>
+      </div>
+      <div id="contact-us-form">
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Enter your name here" />
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Enter your email here" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="5" cols="30">Enter your message here</textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
     <script src="./travel_recommendation.js"></script>
   </body>
 </html>
