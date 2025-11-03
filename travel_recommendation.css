@@ -27,6 +27,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #333;
+  z-index: 10;
 }
 
 nav {
@@ -34,6 +35,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  z-index: 10;
 }
 
 a {
@@ -59,26 +61,29 @@ a.active {
   display: flex;
   align-items: center;
   gap: 1rem;
+  z-index: 10;
 }
 
 .content-container {
   position: relative; /* Ensure the container is positioned for overlay */
   background: url(./assets/background.jpg) no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
   font-family: "Roboto", Arial, sans-serif; /* Modern font */
   color: white; /* Default text color */
 }
 
 .content-container::before {
   content: "";
-  position: absolute;
+  position: fixed; /* Cover viewport so overlay persists when content overflows */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
   z-index: 1; /* Ensure the overlay is above the background */
+  pointer-events: none; /* Don't block interactions */
 }
 
 .content-container::after {
